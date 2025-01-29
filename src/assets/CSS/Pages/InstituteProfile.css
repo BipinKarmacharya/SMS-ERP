@@ -1,0 +1,44 @@
+#instituteProfileForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+} 
+.logoFieldset {
+    height: 23vh;
+}
+.logoDiv {
+    width: 50vw;
+    display: flex;
+    gap: 50px;
+    /* justify-content: space-around; */
+    align-items: center;
+    padding: 10px 20px;
+    /* margin-top: 25px; */
+}
+#logoImg {
+    height: 120px;
+    width: 120px;
+    border: 2px solid black;
+    border-radius: 50%;
+    text-align: center; 
+} 
+option {
+    border-radius: var(--border-radius-2);
+}
+
+
+
+@media (width > 990px) {
+    .formBox {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .sideA, .sideB {
+        width: 46%;
+    }
+    .logoDiv {
+        width: 25vw;
+    }
+}
+

@@ -1,0 +1,139 @@
+/* All Students */
+/* All Employees */
+
+.allStudentsData,
+.allEmployeesData {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 35px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.studentDetails,
+.employeeDetails {
+    height: 250px;
+    box-shadow: var(--box-shadow-1);
+    border-radius: var(--border-radius-3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.studentDetails hr, 
+.employeeDetails hr{
+    width: 70%;
+}
+.studentPhoto,
+.employeePhoto {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    text-align: center;
+}
+.studentIdentity,
+.employeeIdentity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.8rem;
+}
+.editIcons {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@media (width < 1200px) {
+    .allStudentsData {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+} 
+
+
+/* Add Students */
+
+#addStudentForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.studentInfo,
+.personalInfo,
+.parentsInfo,
+.emergencyContact {
+    width: 100%;
+    margin-top: 5vh;
+}
+.studentInfo{
+    margin-top: 0;
+}
+.fieldsetDiv {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1vw;
+}
+
+
+@media (width < 1150px) {
+    .fieldsetDiv {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* Students List */
+
+.data-table {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+
+/* Search Form */
+#searchForm {
+    display: flex;
+    justify-content: space-around;
+    box-shadow: none;
+    margin-bottom: 20px;
+}
+#searchForm fieldset {
+    height: 6vh;
+    min-width: 300px;
+}
+
+#searchForm fieldset {
+    position: relative;
+}
+#searchForm fieldset input,
+#searchForm fieldset select {
+    position: absolute;
+    width: 93%;
+    /* border: 1px solid; */
+    height: 4vh;
+}

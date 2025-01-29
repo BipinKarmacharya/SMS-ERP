@@ -1,0 +1,51 @@
+.character {
+    min-height: 70vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 25px solid rgb(72, 123, 218);
+    position: relative;
+    margin: 10px auto;
+}
+
+.certificateText {
+    min-width: 30vw;
+    text-align: justify;
+    padding: 0px 20px;
+    font-family: "Georgia", serif; 
+    font-style: italic;
+}
+.certificateHeader {
+    display: flex;
+}
+.logo {
+    height: 80px;
+    width: 80px;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 50%;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+.photo {
+    height: 100px;
+    width: 80px;
+    border: 1px solid;
+    text-align: center;
+    position: absolute;
+    right: 30px;
+    top: 50px;
+}
+.redTitle {
+    margin: 15px;
+    font-size: 40px;
+    color: #ff0000;
+    font-family: "Old English Text MT", "Gothic", "Fraktur", serif;
+}
+.characterFooter {
+    min-width: 30vw;
+    display: flex;
+    gap: 70px;
+}

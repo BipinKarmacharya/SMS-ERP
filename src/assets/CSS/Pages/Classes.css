@@ -1,0 +1,48 @@
+/* All Classes */
+.allClasses {
+    margin: 5vh auto;
+    display: grid;
+    grid-template-columns: repeat(4,minmax(30vh, 40vw));
+    gap: 2rem;
+}
+.class {
+    padding: 0 2rem;
+    border-radius: var(--border-radius-2);
+    cursor: pointer;
+    background-color: aqua;
+}
+.classTitle,
+.classDetails {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.icons #delete {
+    color: #ff0000;
+    margin-left: 0.8rem;
+}
+.addNew {
+    min-height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Add Classes */
+
+#addClasses {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 100px ;
+} 
+
+
+
+
+/* @media (width < 900px) {
+    form {
+         width: 90vw;
+    }
+}  */

@@ -1,0 +1,29 @@
+.header {
+    height: 11vh;
+    width: 100vw;
+    background: linear-gradient(45deg, rgb(53, 78, 191) 26%, rgba(65,210,240,1) 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+ }
+.schoolDetails {
+    height: 11vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.schoolDetails .schoolName {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.schoolDetails .address {
+    font-size: 0.9rem;
+}
+.schoolDetails  .targetLine {
+    font-size: 0.8rem;
+    font-style: italic;
+    color: rgb(255, 200, 0);
+}

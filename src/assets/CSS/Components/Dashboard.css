@@ -1,0 +1,67 @@
+.dashboard {
+    height: 89vh;
+}
+.gridContainer {
+    min-width: 500px;
+    min-height: 50vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+.gridItem {
+    background: #2196f3d6;
+    border-radius: 12px ;
+}
+.gridItem:hover,
+.graph-container:hover {
+    box-shadow:  3px 3px 10px #bebdbd,
+    -3px 3px 20px rgb(148, 146, 146);
+    transition: linear 0.2s;
+    cursor: pointer;
+}
+.gridItem i {
+    color: white;
+    margin-left: 20px;
+    font-size: 50px;
+    padding-top: 10px;
+}
+.gridItem h3
+{
+    color: white;
+    padding-left: 10px;
+}
+.gridContainer #panel {
+    height: 8rem;
+    width: 100%;
+    background-color: #f9c8c9d5;
+    margin-top: 30px;
+    border-radius: 10px;
+    grid-column-start: span 3;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.gridContainer #panel .panelText {
+    width: 60%;
+    margin: 0 30px ;
+}
+.gridContainer .panelImage {
+    height: 8rem;
+    width: 200px;
+}
+.gridContainer #panel span {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+.gridContainer #panel p {
+    font-family: var(--ff-secondary);
+    font-size: 18px;
+    text-transform: capitalize;
+    padding-top: 5px;
+}
+
+.gridContainer #panel img {
+    width: 100%;
+    margin-top: -30px;
+}
