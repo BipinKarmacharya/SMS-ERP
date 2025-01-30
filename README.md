@@ -1,8 +1,8 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# SMS-ERP
+<li> SMS-School Management System is a web-app, essential for efficiently managing the day-to-day operations of educational institutions.</li> <br>
+<li> The system focuses on: </li><ol>
+    <li> Streamlined Administration </li>
+    <li> Centralized Data Management </li>
+    <li> Enhanced Academic Performance Tracking </li>
+    <li> Financial Management </li>
+    <li> Data Security and Privacy </li></ol>
