@@ -1,7 +1,7 @@
 .sidebar {
     /* grid-area: sidebar; */
     height: 87vh;
-    width: 220px;
+    width: 250px;
     padding: 5px 1em;
     background-color: var(--base-clr);
     border-right: 1px solid var(--line-clr);

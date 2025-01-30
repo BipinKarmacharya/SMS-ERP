@@ -100,6 +100,20 @@ const Sidebar = () => {
             <Link to ="/add-employee">Add Employees</Link>
           </div>
         </div>
+      </div><div className="menu-item">
+        <div className="menu-item-title">
+          <i className="fa-solid fa-handshake"></i>
+            <span>Attendance</span>
+          <i className="bx bx-plus dropdownPlus"></i>
+        </div>
+        <div className="sub-menu">
+          <div className="sub-item">
+            <Link to ="/">Employee Attendance</Link>
+          </div>
+          <div className="sub-item">
+            <Link to ="/">Student Attendance</Link>
+          </div>
+        </div>
       </div>
       <div className="menu-item">
         <div className="menu-item-title">

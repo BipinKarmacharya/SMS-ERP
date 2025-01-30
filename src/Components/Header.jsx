@@ -4,8 +4,8 @@ import "/src/assets/CSS/Components/Header.css";
 const Header = () => {
   return (
     <header className="header">
-        <div className="systemLogo">
-          <img src="" alt="Logo" />
+        <div className="instituteLogo">
+          <img src="/Images/VIDYA-white.png" alt="Logo" />
         </div>
 
         <div className="schoolDetails">

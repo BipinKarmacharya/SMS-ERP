@@ -9,11 +9,9 @@
 .logoDiv {
     width: 50vw;
     display: flex;
-    gap: 50px;
-    /* justify-content: space-around; */
+    gap: 5%;
     align-items: center;
     padding: 10px 20px;
-    /* margin-top: 25px; */
 }
 #logoImg {
     height: 120px;

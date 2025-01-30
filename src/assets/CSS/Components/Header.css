@@ -9,6 +9,9 @@
     top: 0;
     z-index: 10;
  }
+ .instituteLogo img {
+    height: 70px;
+ }
 .schoolDetails {
     height: 11vh;
     display: flex;
