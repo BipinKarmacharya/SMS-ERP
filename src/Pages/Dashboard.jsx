@@ -23,6 +23,7 @@ const Dashboard = () => {
           <div className="panelText">
             <span>welcome to admin panel</span>
             <p>This is where you can manage all.</p>
+            
           </div>
           <div className="panelImage">
             <img src="./assets/images/background.png" alt="#" />

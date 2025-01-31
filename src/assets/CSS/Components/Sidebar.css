@@ -29,9 +29,17 @@
 }
 .sub-menu {
     margin-left: 35px;
+    overflow: hidden; 
+  
 }
+.sub-menu.open {
+    height: auto; 
+    opacity: 1; 
+  
+  }
 .sub-item {
     margin-top: 5px;
+    padding-left: 20px;
 }
 .line {
     height: 2px;
