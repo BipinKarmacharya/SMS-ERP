@@ -8,7 +8,7 @@ const Sidebar = () => {
 
   // Toggle the visibility of the sub-menu
   const toggleSubMenu = (index) => {
-    setOpenMenu((prevState) => (prevState === index ? null : index)); // Toggle the menu
+    setOpenMenu(M => (M === index ? null : index)); // Toggle the menu
   };
 
   return (
