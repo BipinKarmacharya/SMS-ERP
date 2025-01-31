@@ -2,6 +2,23 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "/src/assets/CSS/Components/Sidebar.css";
 
+const toggleIcons = document.querySelectorAll('#drop');
+
+  toggleIcons.forEach(function(icon) {
+      icon.addEventListener('click', function() {
+          const subMenu = icon.closest('.menu-item').querySelector('.sub-menu');
+          subMenu.classList.toggle('hidden');
+          
+          // Toggle between + and - icons
+          if (subMenu.classList.contains('hidden')) {
+              icon.classList.remove('bx-minus');
+              icon.classList.add('bx-plus');
+          } else {
+              icon.classList.remove('bx-plus');
+              icon.classList.add('bx-minus');
+          }
+      });
+  });
 const Sidebar = () => {
   return (
     <aside className="sidebar">
@@ -23,11 +40,11 @@ const Sidebar = () => {
       <div className="menu-item">
         <div className="menu-item-title">
           <i className="bx bx-cog allIcons"></i>
-            <span>General Settings</span>
+            <span id="drop">General Settings</span>
           <i className="bx bx-plus dropdownPlus"></i>
-        </div>
+        </div>  
 
-        <div className="sub-menu">
+        <div className="sub-menu hidden">
           <div className="sub-item">
             <Link to="/institute-profile">Institute Profile</Link>
           </div>
@@ -43,10 +60,10 @@ const Sidebar = () => {
       <div className="menu-item">
         <div className="menu-item-title">
           <i className="fa-solid fa-pen-ruler"></i>
-            <span>Classes</span>
+            <span id="drop">Classes</span>
           <i className="bx bx-plus dropdownPlus"></i>
         </div>
-        <div className="sub-menu">
+        <div className="sub-menu hidden">
           <div className="sub-item">
             <Link to="/all-classes">All Classes</Link>
           </div>
@@ -59,10 +76,10 @@ const Sidebar = () => {
       <div className="menu-item">
         <div className="menu-item-title">
           <i className="bx bx-book-content allIcons"></i>
-            <span>Subjects</span>
+            <span id="drop">Subjects</span>
           <i className="bx bx-plus dropdownPlus"></i>
         </div>
-        <div className="sub-menu">
+        <div className="sub-menu hidden">
           <div className="sub-item">
             <Link to ="/">All Subjects</Link>
           </div>
@@ -74,10 +91,10 @@ const Sidebar = () => {
       <div className="menu-item">
         <div className="menu-item-title">
           <i className="fa-solid fa-children"></i>
-            <span>Students</span>
+            <span id="drop">Students</span>
           <i className="bx bx-plus dropdownPlus"></i>
         </div>
-        <div className="sub-menu">
+        <div className="sub-menu hidden">
           <div className="sub-item">
             <Link to ="/all-students">All Students</Link>
           </div>
@@ -89,10 +106,10 @@ const Sidebar = () => {
       <div className="menu-item">
         <div className="menu-item-title">
           <i className="fa-solid fa-handshake"></i>
-            <span>Employees</span>
+            <span id="drop">Employees</span>
           <i className="bx bx-plus dropdownPlus"></i>
         </div>
-        <div className="sub-menu">
+        <div className="sub-menu hidden">
           <div className="sub-item">
             <Link to ="/all-employee">All Employees</Link>
           </div>
@@ -103,10 +120,10 @@ const Sidebar = () => {
       </div><div className="menu-item">
         <div className="menu-item-title">
           <i className="fa-solid fa-handshake"></i>
-            <span>Attendance</span>
+            <span id="drop">Attendance</span>
           <i className="bx bx-plus dropdownPlus"></i>
         </div>
-        <div className="sub-menu">
+        <div className="sub-menu hidden">
           <div className="sub-item">
             <Link to ="/">Employee Attendance</Link>
           </div>
@@ -118,10 +135,10 @@ const Sidebar = () => {
       <div className="menu-item">
         <div className="menu-item-title">
           <i className="fa-solid fa-file-invoice-dollar allIcons"></i>
-            <span>Accounts</span>
+            <span id="drop">Accounts</span>
           <i className="bx bx-plus dropdownPlus"></i>
         </div>
-        <div className="sub-menu">
+        <div className="sub-menu hidden">
           <div className="sub-item">
             <Link to ="">Fees</Link>
           </div>
@@ -166,9 +183,9 @@ const Sidebar = () => {
       <div className="menu-item">
         <div className="menu-item-title">
           <i className="bx bx-message-square-dots allIcons"></i>
-            <span>Notices</span>
+            <span id="drop">Notices</span>
         </div>
-        <div className="sub-menu">
+        <div className="sub-menu hidden">
           <div className="sub-item">
             <Link to ="/new-notice">New Notice</Link>
           </div>
@@ -192,10 +209,10 @@ const Sidebar = () => {
       <div className="menu-item">
         <div className="menu-item-title">
           <i className="fa-solid fa-award"></i>
-            <span>Certificates</span>
+            <span id="drop">Certificates</span>
           <i className="bx bx-plus dropdownPlus"></i>
         </div>
-        <div className="sub-menu">
+        <div className="sub-menu hidden">
           <div className="sub-item">
             <Link to ="/students-list">T/C Certificate</Link>
           </div>

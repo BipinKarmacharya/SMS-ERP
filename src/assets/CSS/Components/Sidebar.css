@@ -38,3 +38,14 @@
     background-color: #bebebe;
     border: none;
 }
+.hidden
+{
+    display: none;
+}
+.show-item {
+    display: block;
+}
+body
+{
+    cursor: pointer;
+}
