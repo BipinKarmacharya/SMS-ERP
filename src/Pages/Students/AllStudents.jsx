@@ -8,13 +8,9 @@ const AllStudents = () => {
   return (
     <>
       <div className="all-students">
-        <PageTitle />
         <SearchForm />
         <div className="classInfo">
           <h2>Class 1</h2>
-        </div>
-        <div className="viewStyle">
-          <Link to ="/students-list">View List</Link>
         </div>
         <div className="allStudentsData">
           <div className="studentDetails">

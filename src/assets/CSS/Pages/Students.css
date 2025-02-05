@@ -134,6 +134,5 @@ table tr:hover {
 #searchForm fieldset select {
     position: absolute;
     width: 93%;
-    /* border: 1px solid; */
     height: 4vh;
 }

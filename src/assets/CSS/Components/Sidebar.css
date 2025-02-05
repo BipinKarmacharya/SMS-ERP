@@ -38,3 +38,8 @@
     background-color: #bebebe;
     border: none;
 }
+
+
+.sidebar.closed {
+    width: 20px;
+}

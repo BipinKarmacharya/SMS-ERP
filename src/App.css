@@ -40,6 +40,7 @@
 .allIcons:hover,
 select:hover,
 button:hover,
+.menu-item-title:hover,
 .sub-item:hover {
   cursor: pointer;
 }

@@ -1,10 +1,11 @@
 import React from "react";
+import { useState } from "react";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 
 import Header from "./Components/Header";
-import Sidebar from "./Components/Sidebar";
+import { Sidebar } from "./Components/Sidebar";
 import Dashboard from "./Pages/Dashboard";
 import InstituteProfile from "./Pages/General Setting/InstituteProfile";
 import AllClasses from "./Pages/Class Rooms/AllClasses";
@@ -18,7 +19,11 @@ import Character from "./Pages/Certificates/Character";
 import NewNotice from "./Pages/Notices/NewNotice";
 import PreviousNotice from "./Pages/Notices/PreviousNotice";
 
+import PageTitle from "./Components/PageTitle";
+
 const App = () => {
+
+  const [pageTitle, setPageTitle] = useState("Dashboard");
   return (
     <Router>
       <div className="app">
@@ -26,8 +31,9 @@ const App = () => {
           <Header />
         </div>
         <div className="main">
-          <Sidebar />
+          <Sidebar setPageTitle={setPageTitle}/>
           <div className="content">
+            <PageTitle title={pageTitle} />
             <Routes>
               <Route path="/" element={<Dashboard />} />
               <Route path="/institute-profile" element={<InstituteProfile />} />

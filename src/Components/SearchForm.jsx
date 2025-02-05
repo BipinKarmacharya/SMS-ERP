@@ -5,7 +5,7 @@ const SearchForm = () => {
     <>
       <form action="" id="searchForm">
         <fieldset>
-          <legend>Student's Name</legend>
+          <legend>Search Student</legend>
           <input
             type="search"
             name="searchStudent"

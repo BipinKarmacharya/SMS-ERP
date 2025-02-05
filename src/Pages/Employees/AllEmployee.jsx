@@ -5,10 +5,9 @@ const AllEmployee = () => {
   return (
     <>
       <div className="all-Employees">
-        <PageTitle />
         <form action="" id="searchForm">
           <fieldset>
-            <legend>Employee's Name</legend>
+            <legend>Search Employee</legend>
             <input
               type="search"
               name="searchEmployee"

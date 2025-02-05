@@ -7,7 +7,6 @@ const Header = () => {
         <div className="instituteLogo">
           <img src="/Images/VIDYA-white.png" alt="Logo" />
         </div>
-
         <div className="schoolDetails">
           <span className="schoolName">Institute Name</span>
           <span className="address">Address of Institute</span>

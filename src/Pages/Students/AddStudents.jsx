@@ -4,7 +4,6 @@ const AddStudents = () => {
   return (
     <>
       <div className="add-students">
-        <PageTitle />
         <div className="formHeader">
           <h2>Admission Form</h2>
           <p>Fields Marked * are required.</p>
@@ -22,6 +21,7 @@ const AddStudents = () => {
                   name="studentFirstName"
                   id="studentFirstName"
                   placeholder="First Name"
+                  value=""
                   required
                 />
               </fieldset>
