@@ -1,6 +1,6 @@
 import React from "react";
 import "/src/assets/CSS/Components/Dashboard.css";
-
+import Background from '../assets/image/background.png'
 const Dashboard = () => {
   return (
     <div className="dashboard">
@@ -25,8 +25,8 @@ const Dashboard = () => {
             <p>This is where you can manage all.</p>
             
           </div>
-          <div className="panelImage">
-            <img src="./assets/images/background.png" alt="#" />
+          <div className="panelImage">  
+            <img src={Background} alt="#" />
           </div>
         </div>
       </div>

@@ -41,6 +41,7 @@ const App = () => {
               <Route path="/character-certificate" element={<Character />} />
               <Route path="/new-notice" element={<NewNotice />} />
               <Route path="/prev-notice" element={<PreviousNotice />} />
+             
             </Routes>
           </div>
         </div>

@@ -36,7 +36,9 @@
 .allIcons {
   font-size: 1.2rem;
 }
-
+body{
+  background: #e0e5ec;
+}
 .allIcons:hover,
 select:hover,
 button:hover,

@@ -7,6 +7,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
+    margin-top: 10px;
 }
 .gridItem {
     background: #2196f3d6;

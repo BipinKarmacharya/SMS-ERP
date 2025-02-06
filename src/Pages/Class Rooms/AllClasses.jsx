@@ -30,6 +30,7 @@ const AllClasses = () => {
           <h1>10</h1>
           <p>Students</p>
         </div>
+        <div className="profress"></div>
       </div>
 
       <div className="class addNew" id="addNewClass">

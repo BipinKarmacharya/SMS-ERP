@@ -275,7 +275,7 @@ const Sidebar = () => {
       <div className="menu-item">
         <div className="menu-item-title">
           <i className="fa-regular fa-circle-user"></i>
-            <span>Profile</span>
+          <Link to ="/Profilet">Profile</Link>
         </div>
       </div>
       <div className="menu-item">

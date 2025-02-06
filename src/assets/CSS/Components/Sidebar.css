@@ -1,11 +1,15 @@
+body
+{
+    cursor: pointer;
+}
 .sidebar {
     /* grid-area: sidebar; */
     height: 87vh;
     width: 250px;
-    padding: 5px 1em;
-    background-color: var(--base-clr);
+    padding: 6px 1rem;
     border-right: 1px solid var(--line-clr);
-
+    background: #e0e5ec;
+    box-shadow: 9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px    rgba(255,255,255, 0.5);
     position: sticky;
     top: 11vh;
     align-self: start;
@@ -32,14 +36,19 @@
     overflow: hidden; 
   
 }
-.sub-menu.open {
+.sub-menu.open 
+{
     height: auto; 
     opacity: 1; 
   
-  }
+}
+.menu-item span:hover
+{
+    color: rgb(32, 134, 198);
+}
 .sub-item {
     margin-top: 5px;
-    padding-left: 20px;
+    padding-left: 10px;
 }
 .line {
     height: 2px;
@@ -52,8 +61,4 @@
 }
 .show-item {
     display: block;
-}
-body
-{
-    cursor: pointer;
 }
