@@ -21,7 +21,7 @@ const AddStudents = () => {
                   name="studentFirstName"
                   id="studentFirstName"
                   placeholder="First Name"
-                  value=""
+                  defaultValue=""
                   required
                 />
               </fieldset>
@@ -74,7 +74,7 @@ const AddStudents = () => {
                 <input type="date" name="addDate" id="addDate" required />
               </fieldset>
 
-              <fieldset>
+              {/* <fieldset>
                 <legend>Discount in Fee*</legend>
                 <input
                   type="number"
@@ -83,7 +83,7 @@ const AddStudents = () => {
                   placeholder="Discount In Fee (in %)"
                   required
                 />
-              </fieldset>
+              </fieldset> */}
             </div>
           </div>
 
@@ -129,8 +129,8 @@ const AddStudents = () => {
               </fieldset>
 
               <fieldset>
-                <legend>Any Identification Mark?</legend>
-                <input type="text" name="identifyMark" id="identifyMark" />
+                <legend>Other Document - (Optional)</legend>
+                <input type="file" name="otherDoc" id="otherDoc" />
               </fieldset>
 
               <fieldset>
@@ -234,35 +234,6 @@ const AddStudents = () => {
                   name="parentEmail"
                   id="parentEmail"
                   placeholder="Email Address"
-                />
-              </fieldset>
-            </div>
-          </div>
-
-          <div className="emergencyContact">
-            <div className="infoHeader">
-              <h5>4. Emergency Contact Information</h5>
-            </div>
-            <div className="fieldsetDiv">
-              <fieldset>
-                <legend>Contact Number 1*</legend>
-                <input
-                  type="num"
-                  name="emergencyContact1"
-                  id="emergencyContact1"
-                  placeholder="Emergency Contact 1"
-                  required
-                />
-              </fieldset>
-
-              <fieldset>
-                <legend>Contact Number 2*</legend>
-                <input
-                  type="num"
-                  name="emergencyContact2"
-                  id="emergencyContact2"
-                  placeholder="Emergency Contact 2"
-                  required
                 />
               </fieldset>
             </div>

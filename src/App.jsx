@@ -13,8 +13,12 @@ import AddClasses from "./Pages/Class Rooms/AddClasses";
 import AllStudents from "./Pages/Students/AllStudents";
 import AddStudents from "./Pages/Students/AddStudents";
 import StudentsList from "./Pages/Students/StudentsList";
+import ViewDetails from "./Pages/Students/ViewDetails";
 import AllEmployee from "./Pages/Employees/AllEmployee";
 import AddEmployee from "./Pages/Employees/AddEmployee";
+import EmployeeAttendance from "./Pages/Attendance/EmployeeAttendance";
+import StudentAttendance from "./Pages/Attendance/StudentAttendance";
+import Search from "./Pages/Attendance/Search";
 import Character from "./Pages/Certificates/Character";
 import NewNotice from "./Pages/Notices/NewNotice";
 import PreviousNotice from "./Pages/Notices/PreviousNotice";
@@ -44,9 +48,16 @@ const App = () => {
               <Route path="/students-list" element={<StudentsList />} />
               <Route path="/all-employee" element={<AllEmployee />} />
               <Route path="/add-employee" element={<AddEmployee />} />
+              <Route path="/employee-attendance" element={<EmployeeAttendance />} />
+              <Route path="/search" element={<Search />} />
+              <Route path="/attendance" element={<StudentAttendance />} />
               <Route path="/character-certificate" element={<Character />} />
               <Route path="/new-notice" element={<NewNotice />} />
               <Route path="/prev-notice" element={<PreviousNotice />} />
+
+              {/* Students Details */}
+
+              <Route path="/students/:id/view" element={<ViewDetails />} />
             </Routes>
           </div>
         </div>
