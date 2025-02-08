@@ -1,91 +1,40 @@
-import PageTitle from "../../Components/PageTitle";
 import "/src/assets/CSS/Pages/Students.css";
 
-const AllEmployee = () => {
-  return (
-    <>
-      <div className="all-Employees">
-        <PageTitle />
-        <form action="" id="searchForm">
-          <fieldset>
-            <legend>Employee's Name</legend>
-            <input
-              type="search"
-              name="searchEmployee"
-              id="searchEmployee"
-              placeholder="Search Employee"
-              required
-            />
-          </fieldset>
-          <fieldset>
-            <legend>Select Department</legend>
-            <select
-              name="selectClass"
-              id="selectClass"
-              defaultValue=""
-              required
-            >
-              <option value="" disabled>
-                View Employees By Department
-              </option>
-              <option value="1">Administrative</option>
-              <option value="2">Primary Level</option>
-            </select>
-          </fieldset>
-        </form>
-        <div className="">
-          <h2>Employees</h2>
-        </div>
-        <div className="allEmployeesData">
-          <div className="employeeDetails">
-            <div className="employeePhoto">Photo</div>
-            <div className="employeeIdentity">
-              <p className="empIdNumber">01-A-102</p>
-              <p>Employee Name</p>
-            </div>
-            <hr />
-            <div className="editIcons">
-              <i
-                className="fa-regular fa-eye allIcons"
-                id="seeEmployeeDetails"
-              ></i>
-              <i
-                className="fa-regular fa-pen-to-square allIcons"
-                id="editEmployeeDetails"
-              ></i>
-              <i
-                className="fa-regular fa-trash-can allIcons"
-                id="deleteEmployeeDetails"
-              ></i>
-            </div>
-          </div>
+import SearchForm from "/src/Components/SearchForm";
+import Profile from "/src/Components/Profile";
 
-          <div className="employeeDetails">
-            <div className="employeePhoto">Photo</div>
-            <div className="employeeIdentity">
-              <p className="empIdNumber">01-A-102</p>
-              <p>Employee Name</p>
+import { employees } from "/src/assets/JSON/EmployeesData"; // Renamed from students to employees
+
+const groupByDepartment = (employees) => {
+  return employees.reduce((acc, employee) => {
+    (acc[employee.department] = acc[employee.department] || []).push(employee);
+    return acc;
+  }, {});
+};
+
+const AllEmployee = () => {
+  const employeesByDepartment = groupByDepartment(employees);
+
+  return (
+    <div className="all-employees">
+      <SearchForm />
+      <div className="all-employees-container">
+        {Object.keys(employeesByDepartment).map((department) => (
+          <div key={department} className="department-section">
+            <div className="departmentInfo">
+              <h2>Department: {department}</h2> {/* Display Department Name */}
             </div>
-            <hr />
-            <div className="editIcons">
-              <i
-                className="fa-regular fa-eye allIcons"
-                id="seeEmployeeDetails"
-              ></i>
-              <i
-                className="fa-regular fa-pen-to-square allIcons"
-                id="editEmployeeDetails"
-              ></i>
-              <i
-                className="fa-regular fa-trash-can allIcons"
-                id="deleteEmployeeDetails"
-              ></i>
+            <div className="allEmployeesData">
+              {employeesByDepartment[department].map((employee) => (
+                <Profile key={employee.id} student={employee} />
+              ))}
             </div>
           </div>
-        </div>
+        ))}
       </div>
-    </>
+    </div>
   );
 };
 
 export default AllEmployee;
+

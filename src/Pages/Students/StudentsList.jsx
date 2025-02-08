@@ -7,7 +7,6 @@ const StudentsList = () => {
   return (
     <>
       <div className="students-list">
-        <PageTitle />
         <SearchForm />
 
         <section className="data-table">

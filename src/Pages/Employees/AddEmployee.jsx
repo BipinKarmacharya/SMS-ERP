@@ -4,7 +4,6 @@ const AddEmployee = () => {
     return (
       <>
         <div className="add-students">
-          <PageTitle />
           <div className="formHeader">
             <h2>Employee Onboarding Form</h2>
             <p>Fields Marked * are required.</p>

@@ -5,7 +5,6 @@ import PageTitle from "../../Components/PageTitle";
 const InstituteProfile = () => {
   return (
     <div className="institute-profile">
-      <PageTitle />
       <div className="formHeader">
         <h2>Update Institute Profile</h2>
         <p>Fields Marked * are required.</p>

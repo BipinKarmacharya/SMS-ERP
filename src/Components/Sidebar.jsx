@@ -1,7 +1,16 @@
+<<<<<<< HEAD
 import { useState } from "react";
+=======
+>>>>>>> f7b099f49ad9cb280cb0fe0820632b05348e0b8f
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import { HiOutlinePlusSm, HiOutlineMinusSm } from "react-icons/hi";
+import { motion } from "framer-motion"; // Import Framer Motion
+import { SidebarData } from "../assets/JSON/SidebarData";
+
 import "/src/assets/CSS/Components/Sidebar.css";
 
+<<<<<<< HEAD
 const Sidebar = () => {
   // State to track which menu is open
   const [openMenu, setOpenMenu] = useState(null);
@@ -9,18 +18,22 @@ const Sidebar = () => {
   // Toggle the visibility of the sub-menu
   const toggleSubMenu = (index) => {
     setOpenMenu(M => (M === index ? null : index)); // Toggle the menu
+=======
+export const Sidebar = ({ setPageTitle }) => {
+  const [openMenu, setOpenMenu] = useState(null);
+
+  const toggleMenu = (id) => {
+    setOpenMenu(openMenu === id ? null : id);
+>>>>>>> f7b099f49ad9cb280cb0fe0820632b05348e0b8f
   };
 
   return (
     <aside className="sidebar">
-      <div className="menu-item">
-        <div className="menu-item-title">
-          <i className="bx bx-menu-alt-right toggle allIcons"></i>
-          <h3 className="font-bold">Menu</h3>
-          <i className="fa-solid fa-angle-left" id="minimizeSidebar"></i>
-        </div>
-      </div>
+      {SidebarData.map((menu) => {
+        const IconComponent = menu.menuIcon; // Get the icon component reference
+        const isOpen = openMenu === menu.id;
 
+<<<<<<< HEAD
       {/* Dashboard */}
       <div className="menu-item">
         <div className="menu-item-title">
@@ -285,8 +298,60 @@ const Sidebar = () => {
         </div>
       </div>
 
+=======
+        return (
+          <div key={menu.id} className="menu-item">
+            {menu.subMenu.length > 0 ? (
+              <div className="menu-item-title" onClick={() => toggleMenu(menu.id)}>
+                {IconComponent && <IconComponent />}
+                <span className="drop">{menu.menuTitle}</span>
+                <div className="toggleIcon"> {isOpen ? <HiOutlineMinusSm /> : <HiOutlinePlusSm />} </div>
+              </div>
+            ) : (
+              <Link
+                to={menu.menuLink[0]}
+                className="menu-item-title"
+                onClick={() => setPageTitle(menu.menuTitle)}
+              >
+                {IconComponent && <IconComponent />}
+                <span className="drop">{menu.menuTitle}</span>
+              </Link>
+            )}
+
+            {/* Smoothly animate submenu open/close */}
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={isOpen ? { height: "auto", opacity: 1 } : { height: 0, opacity: 0 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+              className="submenu-container"
+            >
+              {isOpen && (
+                <SubMenu
+                  subMenu={menu.subMenu}
+                  menuLink={menu.menuLink}
+                  setPageTitle={setPageTitle}
+                />
+              )}
+            </motion.div>
+          </div>
+        );
+      })}
+>>>>>>> f7b099f49ad9cb280cb0fe0820632b05348e0b8f
     </aside>
   );
 };
 
-export default Sidebar;
+const SubMenu = ({ subMenu, menuLink, setPageTitle }) => {
+  return (
+    <div className="sub-menu">
+      {subMenu.map((item, index) => (
+        <div key={index} className="sub-item">
+          <Link to={menuLink[index] || "#"} onClick={() => setPageTitle(item)}>
+            {item}
+          </Link>
+        </div>
+      ))}
+    </div>
+  );
+};

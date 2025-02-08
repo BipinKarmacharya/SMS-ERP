@@ -1,19 +1,14 @@
 import "/src/assets/CSS/Components/PageTitle.css";
 
-function PageTitle() {
+function PageTitle({ title }) {
   return (
-    <>
-      <div className="PageTitle">
-        <h4>General Settings</h4>
-        <span>|</span>
-        <div className="subTitle">
-          <i className="bx bx-building-house allIcons"></i>
-          <span>-</span>
-          <p>Institute Profile</p>
-        </div>
+    <div className="PageTitle">
+      <div className="title-text">
+        <h4>{title || "Default Title"}</h4>
       </div>
-    </>
+    </div>
   );
 }
 
 export default PageTitle;
+

@@ -4,7 +4,6 @@ const Character = () => {
   return (
     <>
       <div className="character-certificate">
-        <PageTitle />
         <div className="character">
           <div className="certificateHeader">
             <div className="logo">Logo</div>

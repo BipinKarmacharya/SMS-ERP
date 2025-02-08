@@ -5,7 +5,6 @@ const AddClasses = () => {
   return (
     <>
       <div className="add-classes">
-        <PageTitle />
         <div className="formHeader">
           <h2>Add New Class</h2>
           <p>Fields Marked * are required.</p>
