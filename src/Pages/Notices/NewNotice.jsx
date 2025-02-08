@@ -39,35 +39,8 @@ const NewNotice = () => {
   };
 
   return (
-<<<<<<< HEAD
-    <div className="notice-container">
-      {/* Section for new notice */}
-      <div className="new-notice">
-        <h2>Create and Forward a New Notice</h2>
-        <form onSubmit={handleSubmit} id="noticeForm">
-          <div className="notice-form-group">
-            <label htmlFor="notice-title">Notice Title</label>
-            <input
-              type="text"
-              id="notice-title"
-              name="notice-title"
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
-              required
-            />
-          </div>
-          <div className="notice-form-group">
-            <label htmlFor="notice-body">Notice Content</label>
-            <textarea
-              id="notice-body"
-              name="notice-body"
-              rows="4"
-              value={content}
-              onChange={(e) => setContent(e.target.value)}
-              required
-            ></textarea>
-=======
-    <>
+
+
       <div className="notice-container">
         {/* Section for new notice */}
 
@@ -138,7 +111,7 @@ const NewNotice = () => {
             <p className="notice-person">
               Notice Forwarded By: <strong>Jane Smith, Teacher</strong>
             </p>
->>>>>>> a0b7dcea85fae520221ae5fdeb8905fa7fca741e
+
           </div>
           <div className="notice-form-group">
             <label htmlFor="notice-date">Date</label>
