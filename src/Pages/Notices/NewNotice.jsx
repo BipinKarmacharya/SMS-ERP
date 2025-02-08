@@ -1,87 +1,136 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import "/src/assets/CSS/Pages/Notices.css";
 
 const NewNotice = () => {
+  const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
+  const [date, setDate] = useState("");
+  const [forwardedBy, setForwardedBy] = useState("");
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const noticeData = {
+      title,
+      content,
+      date,
+      forwardedBy,
+    };
+
+    try {
+      const response = await fetch("http://localhost:5000/send-notice", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(noticeData),
+      });
+
+      const result = await response.json();
+      if (response.ok) {
+        alert(result.message);
+      } else {
+        alert("Failed to send the notice.");
+      }
+    } catch (error) {
+      console.error("Error sending notice:", error);
+    }
+  };
+
   return (
-    <>
-      <div class="notice-container">
-        {/* Section for new notice */}
-
-        <div class="new-notice">
-          <h2>Create and Forward a New Notice</h2>
-          <form action="#" method="POST" id="noticeForm">
-            <div class="notice-form-group">
-              <label for="notice-title">Notice Title</label>
-              <input
-                type="text"
-                id="notice-title"
-                name="notice-title"
-                required
-              />
-            </div>
-            <div class="notice-form-group">
-              <label for="notice-body">Notice Content</label>
-              <textarea
-                id="notice-body"
-                name="notice-body"
-                rows="4"
-                required
-              ></textarea>
-            </div>
-            <div class="notice-form-group">
-              <label for="notice-date">Date</label>
-              <input type="date" id="notice-date" name="notice-date" required />
-            </div>
-            <div class="notice-form-group">
-              <label for="forwarded-by">Forwarded By</label>
-              <input
-                type="text"
-                id="forwarded-by"
-                name="forwarded-by"
-                required
-              />
-            </div>
-            <button type="submit" id="noticeButton">Forward Notice</button>
-          </form>
-        </div>
-
-        {/* Section for displaying previous notices */}
-
-        <div class="notice-board">
-          <h2>Previous Notices</h2>
-          <div class="notice">
-            <h3 class="notice-heading">Notice Title 1</h3>
-            <p class="notice-date">
-              Date: <strong>January 20, 2025</strong>
-            </p>
-            <p class="notice-body">
-              This is the content of the previous notice. Important information
-              is shared here.
-            </p>
-            <p class="notice-person">
-              Notice Forwarded By: <strong>John Doe, Principal</strong>
-            </p>
+    <div className="notice-container">
+      {/* Section for new notice */}
+      <div className="new-notice">
+        <h2>Create and Forward a New Notice</h2>
+        <form onSubmit={handleSubmit} id="noticeForm">
+          <div className="notice-form-group">
+            <label htmlFor="notice-title">Notice Title</label>
+            <input
+              type="text"
+              id="notice-title"
+              name="notice-title"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+              required
+            />
           </div>
-          <div class="notice">
-            <h3 class="notice-heading">Notice Title 2</h3>
-            <p class="notice-date">
-              Date: <strong>January 18, 2025</strong>
-            </p>
-            <p class="notice-body">
-              Details of another notice. This is how notices are displayed on
-              the notice board.
-            </p>
-            <p class="notice-person">
-              Notice Forwarded By: <strong>Jane Smith, Teacher</strong>
-            </p>
+          <div className="notice-form-group">
+            <label htmlFor="notice-body">Notice Content</label>
+            <textarea
+              id="notice-body"
+              name="notice-body"
+              rows="4"
+              value={content}
+              onChange={(e) => setContent(e.target.value)}
+              required
+            ></textarea>
           </div>
-          <Link to ="/prev-notice">
-            <button type="submit" id="noticeButton">View All Previous</button>
-          </Link>
-        </div>
+          <div className="notice-form-group">
+            <label htmlFor="notice-date">Date</label>
+            <input
+              type="date"
+              id="notice-date"
+              name="notice-date"
+              value={date}
+              onChange={(e) => setDate(e.target.value)}
+              required
+            />
+          </div>
+          <div className="notice-form-group">
+            <label htmlFor="forwarded-by">Forwarded By</label>
+            <input
+              type="text"
+              id="forwarded-by"
+              name="forwarded-by"
+              value={forwardedBy}
+              onChange={(e) => setForwardedBy(e.target.value)}
+              required
+            />
+          </div>
+          <button type="submit" id="noticeButton">
+            Forward Notice
+          </button>
+        </form>
       </div>
-    </>
-  )
-}
 
-export default NewNotice
+      {/* Section for displaying previous notices */}
+      <div className="notice-board">
+        <h2>Previous Notices</h2>
+        <div className="notice">
+          <h3 className="notice-heading">Notice Title 1</h3>
+          <p className="notice-date">
+            Date: <strong>January 20, 2025</strong>
+          </p>
+          <p className="notice-body">
+            This is the content of the previous notice. Important information
+            is shared here.
+          </p>
+          <p className="notice-person">
+            Notice Forwarded By: <strong>John Doe, Principal</strong>
+          </p>
+        </div>
+        <div className="notice">
+          <h3 className="notice-heading">Notice Title 2</h3>
+          <p className="notice-date">
+            Date: <strong>January 18, 2025</strong>
+          </p>
+          <p className="notice-body">
+            Details of another notice. This is how notices are displayed on
+            the notice board.
+          </p>
+          <p className="notice-person">
+            Notice Forwarded By: <strong>Jane Smith, Teacher</strong>
+          </p>
+        </div>
+        <Link to="/prev-notice">
+          <button type="submit" id="noticeButton">
+            View All Previous
+          </button>
+        </Link>
+      </div>
+    </div>
+  );
+};
+
+export default NewNotice;
