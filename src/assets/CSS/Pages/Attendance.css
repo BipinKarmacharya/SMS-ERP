@@ -1,0 +1,47 @@
+/* Student Attendance */
+
+.attendance-table-container {
+    box-shadow: var(--box-shadow-2);
+    padding: 20px;
+}
+.attendance-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-bottom: 20px; */
+}
+#selectDate {
+    width: 120px;
+    padding-right: 30px;
+}
+.status {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.status input[type = "checkbox"]{
+    height: 19px;
+    margin: 0;
+}
+#submit-Employee-Attendance,
+#submit-Student-Attendance {
+    margin-top: 20px;
+}
+
+
+/* Search */
+#attendanceSearchForm {
+    width: 400px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#attendanceSearchForm input[type="date"],
+#attendanceSearchForm select {
+    width: 80%;
+    border-radius: var(--border-radius-1);
+    box-shadow: var(--box-shadow-2);
+    /* padding: 0px 10px; */
+}
