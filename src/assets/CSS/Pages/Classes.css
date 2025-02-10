@@ -6,20 +6,38 @@
     gap: 2rem;
 }
 .class {
-    padding: 0 2rem;
+    padding: 0 20px;
     border-radius: var(--border-radius-2);
     cursor: pointer;
-    background-color: aqua;
+    box-shadow: var(--box-shadow-1);
 }
-.classTitle,
-.classDetails {
+.classTitle {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.icons #delete {
+.classIcons {
+    font-size: 18px;
+}
+.classIcons #delete {
     color: #ff0000;
     margin-left: 0.8rem;
+}
+.totalStudents {
+    display: flex;
+    height: 20px;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+}
+.stdIcon {
+    position: absolute;
+    right: 5px;
+    font-size: 20px;
+}
+
+.classDetails h1 {
+    height: 10px;
 }
 .addNew {
     min-height: 15vh;

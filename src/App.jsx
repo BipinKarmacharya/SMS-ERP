@@ -28,15 +28,23 @@ import PageTitle from "./Components/PageTitle";
 const App = () => {
 
   const [pageTitle, setPageTitle] = useState("Dashboard");
+
+  // Toggling Menu
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
   return (
     <Router>
       <div className="app">
         <div className="header">
-          <Header />
+          <Header toggleSidebar={toggleSidebar} />
         </div>
         <div className="main">
-          <Sidebar setPageTitle={setPageTitle}/>
-          <div className="content">
+          <Sidebar setPageTitle={setPageTitle} isSidebarOpen={isSidebarOpen}/>
+          <div className={`content ${isSidebarOpen ? "shifted" : ""}`}>
             <PageTitle title={pageTitle} />
             <Routes>
               <Route path="/" element={<Dashboard />} />

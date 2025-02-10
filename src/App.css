@@ -1,6 +1,8 @@
 /* @import "tailwindcss"; */
 
 :root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
   --button-color: #ffa256;
   --text-color: #585858;
   --line-clr: #42434a;
@@ -14,12 +16,15 @@
   /* box shadow */
   --box-shadow-1: 0.5px 1px 5px 1px #99aee7;
   --box-shadow-2: 0.5px 1px 5px 1px #c3c3c3;
+  --box-shadow-3: 0.5px 1px 5px 1px #f2f2f2;
 
   /*blue shades*/
   --clr-primary-1: hsl(205, 86%, 17%);
   --clr-primary-2: hsl(205, 77%, 27%);
   --clr-primary-3: hsl(205, 72%, 37%);
   --clr-primary-4: hsl(205, 63%, 48%);
+  --clr-primary-5: hsl(0, 0%, 100%);
+  --clr-primary-6: hsl(0, 0%, 0%);
 
   /*grey shades*/
   --clr-grey-1: hsl(210, 22%, 49%);
@@ -52,6 +57,16 @@ button:focus {
 }
 ::-webkit-scrollbar {
     display: none;
+}
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+a {
+  text-decoration: none;
 }
 
 /* Display Styling */

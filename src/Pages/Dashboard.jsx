@@ -1,22 +1,46 @@
 import React from "react";
-import "/src/assets/CSS/Components/Dashboard.css";
+import "/src/assets/CSS/Pages/Dashboard.css";
+
+import { PiStudentFill } from "react-icons/pi";
+import { FaUserShield } from "react-icons/fa6";
+import { TfiRulerPencil } from "react-icons/tfi";
+
+import MyCalendar from "../Components/MyCalender";
 
 const Dashboard = () => {
   return (
     <div className="dashboard">
       <div className="gridContainer">
-        <div className="gridItem" id="totalStudents">
-          <i className="bx bxs-graduation"></i>
-          <h3>Total students :</h3>
-          <div id="totalStudents" style={{ color: "white" }}></div>
+        <div className="gridItem totalStudent" id="totalStudent">
+          <h4>Total Students</h4>
+          <div className="totalCount">
+            <PiStudentFill className="gridIcon" />
+            <h2>100</h2>
+          </div>
         </div>
-        <div className="gridItem" id="totalEmployees">
-          <i className="bx bxs-group"></i>
-          <h3>Total Employees :</h3>
+        <div className="gridItem totalEmployees" id="totalEmployees">
+          <h4>Total Employees</h4>
+          <div className="totalCount">
+            <FaUserShield className="gridIcon" />
+            <h2>21</h2>
+          </div>
         </div>
-        <div className="gridItem" id="totalCourses">
-          <i className="bx bxs-book-content"></i>
-          <h3>Courses:</h3>
+        <div className="gridItem totalClasses" id="totalCourses">
+          <h4>Total Classes</h4>
+          <div className="totalCount">
+            <TfiRulerPencil className="gridIcon" />
+            <h2>10</h2>
+          </div>
+        </div>
+        <div className="gridItem todayCount" id="todayCount">
+          <h5>
+            Today Present Students: <span className="showPercent">0%</span>
+          </h5>
+          <div className="presentBox"></div>
+          <h5>
+            Today Present Employee: <span className="showPercent">100%</span>
+          </h5>
+          <div className="presentBox"></div>
         </div>
 
         <div className="gridItem" id="panel">
@@ -28,16 +52,11 @@ const Dashboard = () => {
             <img src="./assets/images/background.png" alt="#" />
           </div>
         </div>
-      </div>
+        <div className="calender">
+          <MyCalendar />
+        </div>
 
-      {/* graph Container */}
-
-      <div className="graph-container">
-        <canvas id="Bar"></canvas>
-      </div>
-
-      <div className="checkDiv">
-        <p>This is check Div.</p>
+        <div className="checkDiv">Check Div</div>
       </div>
     </div>
   );

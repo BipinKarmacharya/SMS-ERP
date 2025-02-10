@@ -43,15 +43,15 @@ export const SidebarData = [
         id : 5,
         menuTitle : "Students",
         menuIcon : PiStudentFill,
-        subMenu : ["All Students", "Add Student"],
-        menuLink : ["/all-students", "/add-students"],
+        subMenu : ["All Students", "Add Student", "Student ID Card", "Upgrade Student", "Login Portal"],
+        menuLink : ["/all-students", "/add-students", "", "", ""],
     },
     {
         id : 6,
         menuTitle : "Employee",
         menuIcon : FaUserShield,
-        subMenu : ["All Employee", "Add Employee"],
-        menuLink : ["/all-employee", "/add-employee"],
+        subMenu : ["All Employee", "Add Employee", "Employee ID Card", "Login Portal"],
+        menuLink : ["/all-employee", "/add-employee", "", ""],
     },
     {
         id : 7,
@@ -112,7 +112,7 @@ export const SidebarData = [
     // {
     //     id : 18,
     //     menuTitle : "Profile",
-    //     menuIcon : ",
+    //     menuIcon : "",
     //     subMenu : [],
     //     menuLink : [],
     // },

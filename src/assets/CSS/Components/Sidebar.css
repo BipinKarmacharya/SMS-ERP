@@ -1,17 +1,30 @@
+/* Sidebar Toggling */
 .sidebar {
-  /* grid-area: sidebar; */
-  height: 87vh;
+  position: fixed;
+  left: -300px; /* Initially hidden */
+  top: 11vh; /* Adjusted to stay below the header */
   width: 250px;
-  padding: 5px 1em;
+  height: calc(100vh - 11vh); /* Adjust height to fit below the header */
   background-color: var(--base-clr);
-  border-right: 1px solid var(--line-clr);
+  color: white;
+  box-shadow: var(--box-shadow-2);
+  transition: left 0.3s ease-in-out;
+  padding: 0 20px;
+  overflow-y: auto; /* Ensure scrolling if content overflows */
+}
 
-  position: sticky;
-  top: 11vh;
-  align-self: start;
-  overflow-y: auto;
-  transition: 300ms ease-in-out;
-  text-wrap: nowrap;
+/* When sidebar is open */
+.sidebar.open {
+  left: 0; /* Moves in from the left */
+}
+
+/* Main content shift when sidebar opens */
+.content {
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.content.shifted {
+  margin-left: 270px; /* Adjust content when sidebar opens */
 }
 
 .menu-item,
@@ -58,11 +71,6 @@
   color: #fff;
 }
 
-/* .line {
-    height: 2px;
-    background-color: #bebebe;
-    border: none;
-}
-.sidebar.closed {
-    width: 20px;
-} */
+
+
+

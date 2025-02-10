@@ -50,17 +50,47 @@ const AddStudents = () => {
 
               <fieldset>
                 <legend>Gender*</legend>
-                <select name="selectGender" id="selectGender">
+                <select
+                  name="selectGender"
+                  id="selectGender"
+                  defaultValue=""
+                  required
+                >
+                  <option value="" disabled>
+                    Select Gender
+                  </option>
                   <option value="1">Male</option>
                   <option value="2">Female</option>
                   <option value="3">Others</option>
                 </select>
               </fieldset>
-
+              <fieldset>
+                <legend>Address*</legend>
+                <input
+                  type="text"
+                  name="studentAddress"
+                  id="studentAddress"
+                  placeholder="Address"
+                  required
+                />
+              </fieldset>
+              <fieldset>
+                <legend>Email Address</legend>
+                <input
+                  type="email"
+                  name="studentEmailAddress"
+                  id="studentEmail Address"
+                  placeholder="Email Address (example@abc.com)"
+                  required
+                />
+              </fieldset>
               <fieldset>
                 <legend>Select Class*</legend>
-                <select name="selectClass" id="selectClass">
-                  <option value="">Class 1</option>
+                <select name="selectClass" id="selectClass" defaultValue="" required>
+                  <option value="" disabled>
+                    Select Class
+                  </option>
+                  <option value="1">Class 1</option>
                 </select>
               </fieldset>
 
@@ -109,30 +139,41 @@ const AddStudents = () => {
 
               <fieldset>
                 <legend>Religion - (Optional)</legend>
-                <select name="religion" id="religion">
-                  <option value="">Hindu</option>
+                <select name="religion" id="religion" defaultValue="" >
+                  <option value="" disabled>
+                    Select Religion
+                  </option>
+                  <option value="1">Hinduism</option>
+                  <option value="2">Buddhism</option>
+                  <option value="3">Islam</option>
+                  <option value="4">Christianity</option>
+                  <option value="5">Others</option>
                 </select>
               </fieldset>
 
-              <fieldset>
+              {/* <fieldset>
                 <legend>Cast*</legend>
                 <select name="Cast" id="cast">
                   <option value="">Newar</option>
                 </select>
-              </fieldset>
+              </fieldset> */}
 
               <fieldset>
                 <legend>Blood Group - (Optional)</legend>
-                <select name="bloodGroup" id="bloodGroup">
+                <select name="bloodGroup" id="bloodGroup" defaultValue="">
+                  <option value="" disabled>
+                    Select Blood Group
+                  </option>
                   <option value="">A+</option>
+                  <option value="">A-</option>
+                  <option value="">B+</option>
+                  <option value="">B-</option>
+                  <option value="">O+</option>
+                  <option value="">O-</option>
+                  <option value="">AB+</option>
+                  <option value="">AB-</option>
                 </select>
               </fieldset>
-
-              <fieldset>
-                <legend>Other Document - (Optional)</legend>
-                <input type="file" name="otherDoc" id="otherDoc" />
-              </fieldset>
-
               <fieldset>
                 <legend>Transfer Certificate - (Optional)</legend>
                 <input
@@ -141,6 +182,10 @@ const AddStudents = () => {
                   id="transferCertificate"
                   required
                 />
+              </fieldset>
+              <fieldset>
+                <legend>Other Document - (Optional)</legend>
+                <input type="file" name="otherDoc" id="otherDoc" />
               </fieldset>
             </div>
           </div>
@@ -226,7 +271,16 @@ const AddStudents = () => {
                   required
                 />
               </fieldset>
-
+              <fieldset>
+                <legend>Address*</legend>
+                <input
+                  type="text"
+                  name="parentAddress"
+                  id="parentAddress"
+                  placeholder="Address"
+                  required
+                />
+              </fieldset>
               <fieldset>
                 <legend>Email Address - (Optional)</legend>
                 <input

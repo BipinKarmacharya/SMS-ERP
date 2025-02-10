@@ -1,0 +1,102 @@
+.dashboard {
+    height: 89vh;
+}
+.gridContainer {
+    min-width: 500px;
+    min-height: 50vh;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 1.5rem;
+}
+.gridItem {
+    /* height: 150px; */
+    grid-column-start: span 2;
+    background: #2196f3d6;
+    border-radius: 12px ;
+    color: white;
+    padding: 0 40px 0 20px;
+    box-shadow: var(--box-shadow-1);
+}
+.gridItem:hover {
+    box-shadow:  3px 3px 10px #bebdbd,
+    -3px 3px 20px rgb(148, 146, 146);
+    transition: linear 0.2s;
+    cursor: pointer;
+}
+.totalCount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.gridIcon {
+    font-size: 40px;
+}
+.todayCount {
+    grid-column-start: span 3;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--clr-primary-5);
+    color: var(--text-color);
+    padding: 0 20px 20px 20px;
+    position: relative;
+}
+.presentBox {
+    height: 5px;
+    background-color: var(--clr-grey-5);
+    border-radius: var(--border-radius-2);
+}
+.showPercent {
+    position: absolute;
+    right: 20px;
+}
+.gridContainer #panel {
+    height: 8rem;
+    /* width: 100%; */
+    background-color: #f9c8c9d5;
+    margin-top: 30px;
+    border-radius: 10px;
+    grid-column-start: span 6;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.gridContainer #panel .panelText {
+    width: 60%;
+    margin: 0 30px ;
+}
+.gridContainer .panelImage {
+    height: 8rem;
+    width: 200px;
+}
+.gridContainer #panel span {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+.gridContainer #panel p {
+    font-family: var(--ff-secondary);
+    font-size: 18px;
+    text-transform: capitalize;
+    padding-top: 5px;
+}
+
+.gridContainer #panel img {
+    width: 100%;
+    margin-top: -30px;
+}
+
+
+/* Calender */
+.calender {
+    grid-column-start: span 3;
+    grid-row-start: span 2;
+    box-shadow: var(--box-shadow-1);
+    border-radius: var(--border-radius-2);
+    padding: 10px;
+}
+
+/* Check */
+.checkDiv {
+    height: 200px;
+    background-color: aqua;
+}

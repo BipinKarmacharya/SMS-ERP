@@ -1,32 +1,126 @@
-.header {
-    height: 11vh;
-    width: 100vw;
-    background: linear-gradient(45deg, rgb(53, 78, 191) 26%, rgba(65,210,240,1) 100%);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 10;
- }
- .instituteLogo img {
-    height: 70px;
- }
+.navHeader {
+  height: 11vh;
+  width: 100vw;
+  background: linear-gradient(
+    45deg,
+    rgb(53, 78, 191) 26%,
+    rgba(65, 210, 240, 1) 100%
+  );
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.instituteLogo img {
+  height: 75px;
+}
+#menuIcon {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 30px;
+  left: 250px;
+  cursor: pointer;
+}
 .schoolDetails {
-    height: 11vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  height: 11vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .schoolDetails .schoolName {
-    font-size: 1.5rem;
-    font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 .schoolDetails .address {
-    font-size: 0.9rem;
+  font-size: 0.9rem;
 }
-.schoolDetails  .targetLine {
-    font-size: 0.8rem;
-    font-style: italic;
-    color: rgb(255, 200, 0);
+.schoolDetails .targetLine {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: rgb(255, 200, 0);
+}
+
+/* Nav Image */
+#userProfile {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  box-shadow: var(--box-shadow-3);
+  margin: 0 auto;
+  display: block;
+  object-fit: cover;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+/* Positioning the dropdown */
+.dropdown {
+  position: absolute;
+  right: 10px;
+  top: 75px; /* Adjust as needed */
+  background: white;
+  box-shadow: var(--box-shadow-1);
+  border-radius: 8px;
+  width: 180px;
+  padding: 10px;
+  opacity: 0; /* Initially hidden */
+  visibility: hidden;
+  transform: translateY(-10px); /* Move slightly up */
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  z-index: 100;
+}
+
+/* Show dropdown when active */
+.dropdown.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0); /* Move down smoothly */
+}
+
+/* Dropdown arrow (pointer) */
+.dropdown::before {
+  content: "";
+  position: absolute;
+  top: -16px;
+  right: 25px; /* Adjust to align with the user profile */
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+}
+
+/* Styling dropdown items */
+.dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown li {
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.2s;
+  position: relative;
+}
+.dropdownIcon {
+  position: absolute;
+  right: 20px;
+  top: 13px;
+}
+
+.dropdown li:hover {
+  background: #f0f0f0;
+}
+
+.dropdown li:last-child {
+  color: red;
+  font-weight: bold;
+}
+
+/* Ensure the user profile icon is clickable */
+#userProfile {
+  cursor: pointer;
 }
